@@ -15,7 +15,7 @@ Not available yet. The pipeline check will request the load balancer URL and exp
 ## Assumptions
 
 - Region `us-east-1`.
-- One public GitHub repository, this one, with no long-lived cloud keys in the repo.
+- One public GitHub repository, this one, with no long-lived cloud keys in the repo. Local keys go in `.secrets` (gitignored). There is no secrets example file in git, so a filled-in copy cannot be committed by mistake. `source scripts/aws-env.sh` loads `.secrets`.
 - The instance security group will allow HTTP from the load balancer and the bastion, not from the whole internet.
 - Package installs are planned through an S3 gateway endpoint, not a NAT gateway.
 - The lab is destroyed the same day it is applied. A load balancer and a public IPv4 address bill by the hour.

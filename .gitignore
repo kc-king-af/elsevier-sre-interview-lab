@@ -5,6 +5,7 @@
 crash.log
 crash.*.log
 terraform.tfvars
+.secrets
 .secrets/
 override.tf
 override.tf.json
